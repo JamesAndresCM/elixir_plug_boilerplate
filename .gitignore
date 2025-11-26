@@ -1,0 +1,15 @@
+# Build artifacts
+/_build
+/deps
+
+# Elixir specific
+*.ez
+*.beam
+*.dump
+
+# Mix artifacts
+/mix.lock
+
+# Temporary files
+/tmp
+/*.env
