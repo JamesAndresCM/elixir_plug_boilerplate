@@ -25,7 +25,6 @@ defmodule <%= @app_module %>.MixProject do
       {:jason, "~> 1.4"},
       {:ecto_sql, "~> 3.10"},
       {:cors_plug, "~> 3.0"},
-      {:phoenix, "~> 1.7.0"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_pubsub, "~> 2.1"},
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false}

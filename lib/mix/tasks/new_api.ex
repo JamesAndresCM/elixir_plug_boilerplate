@@ -14,6 +14,8 @@ defmodule Mix.Tasks.NewApi do
     app_module = Macro.camelize(app_name)
     create_dirs(app_name)
     copy_template("mix.exs", "#{app_name}/mix.exs", app_name, app_module)
+    copy_template(".formatter.exs", "#{app_name}/.formatter.exs", app_name, app_module)
+    copy_template(".gitignore", "#{app_name}/.gitignore", app_name, app_module)
     copy_template(".env_sample", "#{app_name}/.env_sample", app_name, app_module)
     copy_template("config/config.exs", "#{app_name}/config/config.exs", app_name, app_module)
     copy_template("config/dev.exs", "#{app_name}/config/dev.exs", app_name, app_module)
