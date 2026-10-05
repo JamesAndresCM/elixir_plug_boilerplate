@@ -1,4 +1,4 @@
-defmodule Router do
+defmodule <%= @app_module %>.Router do
   use Plug.Router
   use Plug.ErrorHandler
 
@@ -29,10 +29,10 @@ defmodule Router do
     json_decoder: Jason
 
   # SSE events route - delegate
-  forward "/api/v1/events", to: Routes.EventRouter
+  forward "/api/v1", to: <%= @app_module %>.Routes.EventRouter
 
   # Other API routes
-  # forward "/api/v1", to: Routes.OtherRouter
+  # forward "/api/v1", to: <%= @app_module %>.Routes.OtherRouter
 
   plug :dispatch
 

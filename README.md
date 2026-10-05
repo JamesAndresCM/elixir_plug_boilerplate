@@ -21,5 +21,5 @@ mix run --no-halt
 
 This will start a Plug/Cowboy server on port 4000.
 
-- SSE endpoint: `GET /events/:user_id`
+- SSE endpoint: `GET /api/v1/events?user_id=:id`
 - Example REST endpoints: `GET /examples` and `POST /examples`

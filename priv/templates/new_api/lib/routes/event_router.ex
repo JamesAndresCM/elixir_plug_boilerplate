@@ -1,4 +1,4 @@
-defmodule Routes.EventRouter do  
+defmodule <%= @app_module %>.Routes.EventRouter do
   @moduledoc """
   Simple SSE endpoint using Phoenix.PubSub.
   Streams real-time events for a given user.
@@ -59,7 +59,7 @@ defmodule Routes.EventRouter do
         end
     after
       30_000 ->
-        keepalive = Jason.encode!(%{type: "keep-alive"}) |> Jason.encode!()
+        keepalive = Jason.encode!(%{type: "keep-alive"})
 
         case chunk(conn, "data: #{keepalive}\n\n") do
           {:ok, conn} ->

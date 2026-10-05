@@ -6,7 +6,7 @@ defmodule <%= @app_module %>.Application do
     children = [
       <%= @app_module %>.Repo,
       {Phoenix.PubSub, name: <%= @app_module %>.PubSub},
-      {Plug.Cowboy, scheme: :http, plug: Router, options: [port: 4000]}
+      {Plug.Cowboy, scheme: :http, plug: <%= @app_module %>.Router, options: [port: 4000]}
     ]
 
     opts = [strategy: :one_for_one, name: <%= @app_module %>.Supervisor]
